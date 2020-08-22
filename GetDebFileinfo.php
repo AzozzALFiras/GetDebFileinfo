@@ -24,6 +24,8 @@ if($deb == "deb"){
 
 //  unzip deb for get info from control file'
 if(shell_exec('ar -x '.$filename.' && echo true || echo false') == true){
+    shell_exec('ar -x '.$filename.' && tar xvzf control.tar.gz');
+
 
 
 $md5file = md5_file($filename);
